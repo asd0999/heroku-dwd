@@ -33,7 +33,7 @@ app.set('views', __dirname);
 app.get('/', function(req, res1) {
   client.query('SELECT * FROM posts', function(err, res2) {
     if (err) {
-      console.log(error);
+      console.log(err);
     }
     for (let row of res2.rows) {
       console.log(JSON.stringify(row));
